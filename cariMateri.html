@@ -189,11 +189,28 @@
         margin-top: 20px; /* Margin atas untuk pemisah dari elemen lain */
     }    
     
-    #navUtama{
-        
+    .dropdown-menu {
+        transform: scale(0.9);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform-origin: top center;
     }
 
-</style>
+    .dropdown-menu.show {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    .card-hover {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    </style>
 
 </head>
 <body>
@@ -274,7 +291,7 @@
             </div>
             
             <div style="display:grid; grid-template-columns: 1fr 1fr;" style="color: #6578B2;">
-                <div style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px; margin-bottom:40px;">
+                <div class="card-hover" style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px; margin-bottom:40px;">
                     <img src="media/idea.png" style="width: 80px; height: 80px; border-radius: 8px;">
                     <div>
                         <h3>Otodu For Sigma</h3>
@@ -283,7 +300,7 @@
                     </div>
                 </div>
 
-                <div style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px;">
+                <div class="card-hover" style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px;">
                     <img src="media/focus.png" style="width: 80px; height: 80px; border-radius: 8px;">
                     <div>
                         <h3>Otodu For General</h3>
@@ -291,7 +308,7 @@
                         <h5>3 Topik</h5>
                     </div>
                 </div>
-                <div style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px;">
+                <div class="card-hover" style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px;">
                     <img src="media/growth.png" style="width: 80px; height: 80px; border-radius: 8px;">
                     <div>
                         <h3>Lorem Ipsum</h3>
@@ -299,7 +316,7 @@
                         <h5>4 Topik</h5>
                     </div>
                 </div>
-                <div style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px;">
+                <div class="card-hover" style="border: 1px solid #ddd; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); display: grid; grid-template-columns: 80px 1fr; padding: 10px; border-radius: 8px; height:fit-content; width:350px;">
                     <img src="media/motivation.png" style="width: 80px; height: 80px; border-radius: 8px;">
                     <div>
                         <h3>Lorem Ipsum</h3>
