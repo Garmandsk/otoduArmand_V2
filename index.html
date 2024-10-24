@@ -1,393 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <eta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page title</title>
-    <link href="bootstrapes/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    * {
-        font-family: 'Poppins', sans-serif;
-        color: #365373;
-        box-sizing:border-box;
-    }
-    
-    body{
-        width:100%;
-    }
 
-    #nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 5px;
-        background-color: #f8f9fa;
-    }
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+24/10/2024 07:27:46 -->
 
-    #nav-bawah {
-        display: flex;
-        justify-content: flex-end;
-        gap: 20px;
-        max-width: fit-content;
-    }
-
-    #header {
-        display: flex;
-        justify-content: space-around;
-        gap: 30%;
-        margin: 50px auto;
-    }
-
-    #otodu a {
-        background-color: #6578B2; 
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        font-size: 2em;
-        font-weight: 700;
-    }
-
-    #tentang-otodu {
-        color: #6578B2;
-        height: 100%;
-        font-size: 2em;
-        font-weight: 700;
-    }
-
-    .nav-link {
-        font-weight: 500;
-        color: #365373;
-    }
-
-    .nav-item a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-
-    #progress, #riwayat {
-        padding: 30px;
-        flex: 1;
-        text-align: center;
-        height: 400px;
-    }
-
-    #riwayatMateri {
-        margin-right: 0;
-    }
-
-    section {
-        display: block;
-        width:100%;
-    }
-
-    #footer, #header {
-        background-color: #6578B2;
-    }
-
-    ul {
-        list-style-type: none;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .fade-in {
-        opacity: 0;
-        animation: fadeIn 1s forwards;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    #footer-daftar li {
-        margin-top: 5px;
-    }
-
-    .circle-bg {
-        fill: none;
-        stroke: #e6e6e6;
-        stroke-width: 10;
-    }
-
-    .circle {
-        fill: none;
-        stroke: #3498db;
-        stroke-width: 10;
-        stroke-linecap: round;
-        transform: rotate(90deg);
-        transform-origin: 50% 50%;
-        stroke-dasharray: 283;
-        stroke-dashoffset: 283;
-        transition: stroke-dashoffset 0.5s ease-out;
-    }
-
-    .progress-text {
-        font-size: 18px;
-        text-anchor: middle;
-        dominant-baseline: middle;
-        fill: #3498db;
-    }
-    
-    #tabel-progres {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px; /* Menambahkan jarak antar kolom */
-    }
-
-    #bar {
-        width: 100%; /* Memastikan bar mengambil lebar penuh */
-        margin-top: 5px;
-        display:grid;
-        grid-template-columns:430px 1fr;
-    }
-    
-    #bar2 {
-        width: 100%; /* Memastikan bar mengambil lebar penuh */
-        margin-top: 5px;
-    }
-    
-    #bar p{
-        font-weight: 700;
-    }
-    
-    #bar p #kiri{
-        color: #264653;
-    }
-    
-    #bar p #kanan{
-        color: #D81B60;
-    }
-
-    .progress-stacked {
-        display: flex; /* Memastikan isi dalam bar sejajar */
-        width: 100%;
-    }
-
-    .progress {
-        flex: 1; /* Bar progres akan mengambil sisa lebar */
-        height: 20px; /* Tinggi bar progres */
-        margin: 0; /* Menghapus margin default */
-    }
-
-    #indikator {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Dua kolom untuk indikator */
-        gap: 10px; /* Jarak antar indikator */
-        margin-top: 20px; /* Margin atas untuk pemisah dari elemen lain */
-    }    
-    
-    #navUtama{
-        
-    }
-
-</style>
-
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=1440, maximum-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+        <link rel="stylesheet" href="indexStyles.css">
+        <meta name="og:type" content="website">
+        <meta name="twitter:card" content="photo">
+        <script id="anima-load-script" src="load.js"></script>
+        <script id="anima-hotspots-script" src="hotspots.js"></script>
+        <script id="anima-overrides-script" src="overrides.js"></script>
+        <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
 </head>
-<body>
-    
-    <section id="navUtama" style="width:130%;">
-    <ul class="nav nav-pills nav-justified mb-0" id="nav">
-        <li class="nav-item" id="otodu">
-            <a class="nav-link" aria-current="page" href="#">OTODU</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Natural Progress Language NLP</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="cariMateri.html">Materi</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Jasa Design<br> Web/App</a>
-        </li>
-    </ul>
-
-    <nav class="navbar navbar-light bg-light p-3 pt-0 pb-0" id="nav-bawah" style="position:relative; left:85%;"> 
-    <a class="navbar-brand position-relative" href="#">
-        <span class="position-absolute bg-danger border border-light rounded-circle" 
-              style="top: 5px; right: -5px; width: 10px; height: 10px; display: flex; align-items: center; justify-content: center;">
-            <span class="visually-hidden">New alerts</span>
-        </span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-plus-fill" viewBox="0 0 16 16">
-            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z"/>
-            <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"/>
-        </svg>
-    </a>
-
-      <a class="navbar-brand" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16"> <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/> </svg>
-      </a>
-      <a class="navbar-brand" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-</svg>
-      </a>
-    </nav>
-    </section>
-    
-    <section id="progres" style="background-color: #6578B2; width:130%;">
-    <div class="container-fluid text-light" style="padding:50px; ">
-        <h3>Prestasi Belajar</h3>
-        <h5>Pantau Perkembangan belajar mingguan kamu disini</h5>
-        
-        <div style="display:grid; grid-template-columns: 1fr 1fr;">
-        <div class="bg-white m-5 mx-0 mr-5" style="border-radius:20px; height:fit-content;">
-            <div id="tabel-progres" style="padding:20px;">
-                <div class="mr-0" style="text-align:center;">
-                    <h5>Waktu Belajar Minggu Ini</h4>
-                    <svg class="progress-circle" viewBox="0 0 100 100" width="200" height="200">
-                        <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
-                        <circle class="circle" cx="50" cy="50" r="45"></circle>
-                        <text class="progress-text" x="50" y="50">0%</text>
-                    </svg>
-                    <p>Waktu Belajar Minggu lalu <br>404 detik</p>
-                </div>
-
-                <div>
-                    <h4>Topik baru yang dikuasai</h4>
-<div id="bar">
-    <div class="progress mb-3">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%; background-color: #264653;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%; background-color: #D81B60" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-    <p style="margin-left:10px;">
-        <span id="kiri">3</span>/<span id="kanan">5</span>
-    </p>
-</div>
-
-                    <h4>Soal dijawab dengan benar</h4>
-<div id="bar">
-    <div class="progress mb-3">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: #264653;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%; background-color: #D81B60" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-    <p style="margin-left:10px;">
-        <span id="kiri">9</span>/<span id="kanan">10</span>
-    </p>
-</div>
-
-
-<h4>Topik baru yang dipelajari</h4>
-<div id="bar">
-    <div class="progress mb-3">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%; background-color: #264653;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; background-color: #D81B60" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-    <p style="margin-left:10px;">
-        <span id="kiri">8</span>/<span id="kanan">5</span>
-    </p>
-</div>
-                    
-
-
-                    <div id="indikator">
-                        <div id="bar2">
-                            <div class="progress-stacked" style="width:50%;">
-                                <div class="progress" role="progressbar" style="width: 100%;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="background-color: #264653"></div>
-                                </div>
-                            </div>
-                            <p>Minggu Ini</p>
-                        </div>
-
-                        <div id="bar2">
-                            <div class="progress-stacked" style="width:50%;">
-                                <div class="progress" role="progressbar" style="width: 100%;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="background-color: #D81B60"></div>
-                                </div>
-                            </div>
-                            <p>Minggu Lalu</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white m-5 ml-5" style="border-radius:30px; height:fit-content; width:fit-content;">
-                                <div class="bg-white p-5 text-center" id="riwayat" style="width: 100%; border-radius:20px;">
-                        <h1 class="fade-in" style="width: 100%; margin: 0; padding: 10px 0;">Halo <span>Pengguna</span></h1>
-                        <div id="riwayatMateriTerakhir">
-                            <h4 class="fade-in" style="margin-top: 10px; animation-delay: 0.5s;"><a href="#" class="text-decoration-none">Lanjutkan Materi</a></h4>
-                        </div>
-                        <div id="riwayatMateriLainnya">
-                            <h4 class="fade-in" style="animation-delay: 1.5s;">Materi Lainnya:</h4>
-                            <ul class="list-unstyled">
-                                <li class="fade-in" style="animation-delay: 2s;"><a href="#" class="text-decoration-none">Materi 1</a></li>
-                                <li class="fade-in" style="animation-delay: 2.2s;"><a href="#" class="text-decoration-none">Materi 2</a></li>
-                                <li class="fade-in" style="animation-delay: 2.4s;"><a href="#" class="text-decoration-none">Materi 3</a></li>
-                            </ul>
-                        </div>
-                    </div>
-        </div>
-        </div>
-    </div>
-</section>
-
-
-    
-    <section class="bg-light text-center text-lg-start mt-5" style="width:130%; position:absolute; top:110%;">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase"><span id="tentang-otodu">OTODU</span></h5>
-                    <p>
-                        Otodu adalah platform pembelajaran berbasis Natural Language Processing (NLP) yang menyediakan berbagai materi dan layanan desain web/aplikasi.
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" id="footer-daftar">
-                    <h5 class="text-uppercase">Tautan Cepat</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#" class="text-dark">Natural Language Progressing NLP</a></li>
-                        <li><a href="#" class="text-dark">Cari Materi</a></li>
-                        <li><a href="#" class="text-dark">Jasa Desain Web/App</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0" id="footer-daftar">
-                    <h5 class="text-uppercase">Kontak Kami</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope"></i> email@otodu.com</li>
-                        <li><i class="fas fa-phone"></i> +62 123 456 7890</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center p-3 text-light" id="footer">
-            © 2024 Otodu. All rights reserved.
-        </div>
-    </section>
-    
-    <script>
-        function setProgress(percent) {
-            const circle = document.querySelector('.circle');
-            const text = document.querySelector('.progress-text');
-            const radius = circle.r.baseVal.value;
-            const circumference = 2 * Math.PI * radius;
-            const offset = circumference - (percent / 100) * circumference;
-            
-            circle.style.strokeDasharray = `${circumference} ${circumference}`;
-            circle.style.strokeDashoffset = offset;
-            text.textContent = `123d`;
-        }
-        setProgress(100);
-    </script>
-    <script src="bootstrapes/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<body style="margin: 0;background: #f6f7fa;">
+    <input type="hidden" id="anPageName" name="page" value="icon">
+    <div class="container-center-horizontal">
+        <div class="icon screen " data-id="39:2">
+            <header class="header-jZFiap" data-id="39:3">
+                <div class="rectangle-76-EZll6M" data-id="39:4"></div>
+                <div class="rectangle-58-EZll6M rectangle-58" data-id="39:5"></div>
+                <img class="image-7-EZll6M" data-id="39:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/image-7.png" alt="image 7">
+                <div class="rectangle-75-EZll6M" data-id="39:7"></div>
+                <h1 class="title-EZll6M" data-id="39:8">NLP OTODU</h1>
+                <div class="mentor-otodu-EZll6M" data-id="39:9">Mentor OTODU</div>
+                <div class="desain-web-app-EZll6M" data-id="39:10">Desain Web &amp; App</div>
+                <div class="rectangle-73-EZll6M" data-id="39:11"></div>
+                <div class="rectangle-74-EZll6M" data-id="39:12"></div>
+           </header>
+                
+                <div class="rectangle-utama-jZFiap" data-id="39:13"></div>
+                <div class="rectangle-putih-jZFiap rectangle-putih" data-id="39:14"></div>
+                <div class="rectangle-putih-BrFaTC rectangle-putih" data-id="39:15"></div>
+                <div class="statistik-nlp-jZFiap" data-id="39:16">Statistik NLP</div>
+                <div class="persentase-nlp-minggu-ini rethinksans-bold-big-stone-19px" data-id="39:17">Persentase NLP minggu ini</div>
+                <div class="persentase-nlp-minggu-ini rethinksans-bold-big-stone-19px" data-id="39:18">Persentase NLP minggu ini</div>
+                <div class="lorem-ipsum-jZFiap" data-id="39:19">Lorem Ipsum</div>
+                <p class="contrary-to-popular-jZFiap" data-id="39:20">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &#34;de Finibus Bonorum et Malorum&#34; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &#34;Lorem ipsum dolor sit amet..&#34;, comes from a line in section 1.10.32.</p>
+                <div class="capaian-nlp-jZFiap rethinksans-bold-big-stone-19px" data-id="39:21">Capaian NLP</div>
+                <p class="statistik-capaian-be-jZFiap" data-id="39:22">Statistik capaian belajar mingguan Kamu ditampilkan di sini!</p>
+                <div class="persentase-nlp-minggu-lalu-jZFiap" data-id="39:23">Persentase NLP minggu lalu:</div>
+                <div class="target-nlp-mingguan-jZFiap" data-id="39:24">Target NLP mingguan:</div>
+                <div class="belum-terpenuhi-jZFiap" data-id="39:25">Belum terpenuhi</div>
+                <div class="x0-jZFiap" data-id="39:26">0%</div>
+                <img class="subtract-jZFiap subtract" data-id="39:27" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/subtract@2x.png" alt="Subtract">
+                <img class="intersect-jZFiap intersect" data-id="39:30" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/intersect-1.svg" alt="Intersect">
+                <div class="x17-jZFiap" data-id="39:35">17%</div>
+                <div class="group-28-jZFiap" data-id="39:36">
+                    <div class="quiz-nlp-selesai-kXYAyw" data-id="39:37">
+                        <span class="span0-6x7xRu rethinksans-bold-big-stone-16px">Quiz NLP<br>selesai</span>
+                        <span class="span1-6x7xRu rethinksans-bold-whisper-16px">--</span></div>
+                        <div class="subbab-baru-dipelajari-kXYAyw" data-id="39:38">
+                            <span class="span0-TpK2M9 rethinksans-bold-big-stone-16px">Subbab baru<br></span>
+                            <span class="span1-TpK2M9 rethinksans-bold-whisper-16px">--</span>
+                            <span class="span2-TpK2M9 rethinksans-bold-big-stone-16px">dipelajari</span></div>
+                            <div class="subbab-dikuasai-kXYAyw rethinksans-bold-big-stone-16px" data-id="39:39">Subbab<br>dikuasai</div>
+                            <div class="group-27-kXYAyw" data-id="39:40">
+                                <img class="subtract-OnRzCU subtract" data-id="39:41" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/subtract-1.svg" alt="Subtract">
+                                <img class="intersect-OnRzCU intersect" data-id="39:47" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/intersect.svg" alt="Intersect">
+                                <img class="intersect-F15kcx intersect" data-id="39:55" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/intersect-2.svg" alt="Intersect">
+                                <img class="intersect-YYINx2 intersect" data-id="39:63" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/intersect-3.svg" alt="Intersect">
+                                <div class="x1527-OnRzCU x1527" data-id="39:71">15/27</div>
+                                <div class="x1527 rethinksans-bold-big-stone-13px" data-id="39:72">15/27</div>
+                                <div class="x25-OnRzCU rethinksans-bold-big-stone-13px" data-id="39:73">2/5</div>
+                                <div class="x57-OnRzCU rethinksans-bold-big-stone-13px" data-id="39:74">5/7</div></div>
+                                <img class="line-1-kXYAyw" data-id="39:75" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/line-1.svg" alt="Line 1">
+                                <img class="line-4-kXYAyw" data-id="39:76" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/line-4.svg" alt="Line 4">
+                                <img class="line-3-kXYAyw" data-id="39:77" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/line-3.svg" alt="Line 3"></div>
+                                <div class="group-29-jZFiap" data-id="39:78">
+                                    <div class="perkembangan-saat-ini-1lArer" data-id="39:79">Perkembangan saat ini</div>
+                                    <div class="rectangle-88-1lArer rectangle-88" data-id="39:80"></div></div>
+                                    <div class="group-30-jZFiap" data-id="39:81">
+                                        <p class="target-capaian-capaian-minggu-lalu-lWaq89" data-id="39:82">Target capaian / capaian minggu lalu</p>
+                                        <div class="rectangle-88-lWaq89 rectangle-88" data-id="39:83"></div></div>
+                                        <p class="kamu-terakhir-mempel-jZFiap rethinksans-normal-big-stone-16px" data-id="39:84"><span class="span0-CjtU9f rethinksans-normal-big-stone-16px">Kamu terakhir mempelajari </span><span class="span1-CjtU9f rethinksans-bold-big-stone-16px">Limit Tak Hingga -<br>Subbab III</span><span class="span2-CjtU9f rethinksans-normal-big-stone-16px">, pengen lanjut lagi?</span></p><div class="halo-sigma_-skibidi-gajadi-pitching6969-jZFiap rethinksans-normal-big-stone-16px" data-id="39:85">
+                                            <span class="span0-k1tXww rethinksans-normal-big-stone-16px">Halo </span><span class="span1-k1tXww rethinksans-bold-big-stone-16px">Sigma_SkibidiGajadiPitching6969</span><span class="span2-k1tXww rethinksans-normal-big-stone-16px">!</span></div>
+                                            <div class="rectangle-89-jZFiap" data-id="39:86"></div>
+                                            <div class="buka-limit-tak-hingga-jZFiap" data-id="39:87"><span class="span0-WyI0Jl">Buka </span><span class="span1-WyI0Jl rethinksans-bold-whisper-16px">Limit Tak Hingga</span></div>
+                                            <footer class="footer-jZFiap" data-id="39:88">
+                                                <div class="rectangle-58-XFxFKH rectangle-58" data-id="39:89"></div>
+                                                <img class="image-9-XFxFKH" data-id="39:90" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6719e5ad512ef1276478a08d/releases/6719f6eff95390d1ced7b4c8/img/image-9@2x.png" alt="image 9">
+                                                <div class="x2024-otodu-limited-XFxFKH" data-id="39:91">@2024 OTODU Limited</div></footer></div></div>
+                                                <script src="launchpad-js/launchpad-banner.js" async></script>
+<script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
 </body>
 </html>
