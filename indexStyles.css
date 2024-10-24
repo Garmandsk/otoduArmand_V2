@@ -991,3 +991,15 @@ input:focus {
   top: 28px;
   width: 37px;
 }
+
+/* Manual */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: inherit;
+    text-decoration: none;
+}
